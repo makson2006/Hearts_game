@@ -1,6 +1,5 @@
 from typing import Optional
 
-
 class Genre:
 
     def __init__(self, name: str, description: Optional[str] = None)->None:
