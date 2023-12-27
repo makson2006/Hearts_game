@@ -46,7 +46,7 @@ class Player:
 class Game:
     def __init__(self, *names: str) -> None:
         deck = Deck.create(shuffle = True)
-        self.names = (list(*names) + "P1 P2 P3 P4".split())[:4] if names else "P1 P2 P3 P4".split()[:4]
+        self.names = (list(names) + "P1 P2 P3 P4".split())[:4] if names else "P1 P2 P3 P4".split()[:4]
         self.hands = {
             n: Player(n,h) for n, h in zip(self.names, deck.deal(4))
         }
@@ -68,5 +68,7 @@ class Game:
 
 if __name__ == '__main__':
     player_names = sys.argv[1:]
-    game = Game(player_names)
+    game = Game(*player_names)
     game.play()
+
+
