@@ -12,6 +12,8 @@
 # https://www.askpython.com/python/examples/print-colored-text-to-the-terminal-in-python
 # https://www.geeksforgeeks.org/print-colors-python-terminal/
 
+
+from colorama import Fore, Back, Style
 class Card:
     SUITS = "♠ ♣ ♥ ♦".split()
     RANKS = "2 3 4 5 6 7 8 9 10 J Q K A".split()
