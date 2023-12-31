@@ -22,3 +22,5 @@ class Card:
         if self.suit == "♥":
             return 1
         return 0
+
+
